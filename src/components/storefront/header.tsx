@@ -24,14 +24,14 @@ export function Header() {
 
   return (
     <>
-      <div className="bg-brand-dark text-brand-gold/80 text-[11px] tracking-wider text-center py-1.5 font-sans hidden sm:block">
+      <div className="bg-brand-dark text-brand-support/80 text-[11px] tracking-wider text-center py-1.5 font-sans hidden sm:block">
         FREE SHIPPING ON ORDERS ABOVE ₹999 &nbsp;|&nbsp; HANDCRAFTED WITH LOVE & INTENTION
       </div>
 
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-300 ${
           scrolled
-            ? "bg-brand-purple/98 backdrop-blur-md shadow-lg"
+            ? "bg-brand-secondary/95 backdrop-blur-md shadow-lg"
             : "bg-gradient-purple"
         }`}
       >
@@ -64,42 +64,42 @@ export function Header() {
           <nav className="hidden lg:flex items-center gap-8 text-[13px] font-sans tracking-wide">
             <Link
               href="/"
-              className="text-white/80 hover:text-brand-gold transition-colors duration-200 uppercase"
+              className="text-white/80 hover:text-brand-accent transition-colors duration-200 uppercase"
             >
               Shop
             </Link>
             <Link
               href="/candles"
-              className="text-white/80 hover:text-brand-gold transition-colors duration-200 uppercase"
+              className="text-white/80 hover:text-brand-accent transition-colors duration-200 uppercase"
             >
               Healing Candles
             </Link>
             <Link
               href="/essential-oil"
-              className="text-white/80 hover:text-brand-gold transition-colors duration-200 uppercase"
+              className="text-white/80 hover:text-brand-accent transition-colors duration-200 uppercase"
             >
               Essential Oils
             </Link>
             <Link
               href="/mood-refresher"
-              className="text-white/80 hover:text-brand-gold transition-colors duration-200 uppercase"
+              className="text-white/80 hover:text-brand-accent transition-colors duration-200 uppercase"
             >
               Intention Salts
             </Link>
           </nav>
 
           <div className="flex items-center gap-1">
-            <button className="hidden sm:flex h-9 w-9 items-center justify-center rounded-full text-white/70 hover:text-brand-gold hover:bg-white/10 transition-all">
+            <button className="hidden sm:flex h-9 w-9 items-center justify-center rounded-full text-white/70 hover:text-brand-accent hover:bg-white/10 transition-all">
               <Search className="h-4 w-4" />
             </button>
-            <button className="hidden sm:flex h-9 w-9 items-center justify-center rounded-full text-white/70 hover:text-brand-gold hover:bg-white/10 transition-all">
+            <button className="hidden sm:flex h-9 w-9 items-center justify-center rounded-full text-white/70 hover:text-brand-accent hover:bg-white/10 transition-all">
               <Heart className="h-4 w-4" />
             </button>
-            <button className="hidden sm:flex h-9 w-9 items-center justify-center rounded-full text-white/70 hover:text-brand-gold hover:bg-white/10 transition-all">
+            <button className="hidden sm:flex h-9 w-9 items-center justify-center rounded-full text-white/70 hover:text-brand-accent hover:bg-white/10 transition-all">
               <User className="h-4 w-4" />
             </button>
             <button
-              className="relative h-9 w-9 flex items-center justify-center rounded-full text-white/70 hover:text-brand-gold hover:bg-white/10 transition-all"
+              className="relative h-9 w-9 flex items-center justify-center rounded-full text-white/70 hover:text-brand-accent hover:bg-white/10 transition-all"
               onClick={() => setCartOpen(true)}
             >
               <ShoppingCart className="h-4 w-4" />
@@ -116,28 +116,28 @@ export function Header() {
           <div className="lg:hidden bg-brand-dark/95 backdrop-blur-md border-t border-white/10 px-6 py-5 space-y-4">
             <Link
               href="/"
-              className="block text-sm text-white/80 hover:text-brand-gold uppercase tracking-wider font-sans"
+              className="block text-sm text-white/80 hover:text-brand-accent uppercase tracking-wider font-sans"
               onClick={() => setMenuOpen(false)}
             >
               Shop
             </Link>
             <Link
               href="/candles"
-              className="block text-sm text-white/80 hover:text-brand-gold uppercase tracking-wider font-sans"
+              className="block text-sm text-white/80 hover:text-brand-accent uppercase tracking-wider font-sans"
               onClick={() => setMenuOpen(false)}
             >
               Healing Candles
             </Link>
             <Link
               href="/essential-oil"
-              className="block text-sm text-white/80 hover:text-brand-gold uppercase tracking-wider font-sans"
+              className="block text-sm text-white/80 hover:text-brand-accent uppercase tracking-wider font-sans"
               onClick={() => setMenuOpen(false)}
             >
               Essential Oils
             </Link>
             <Link
               href="/mood-refresher"
-              className="block text-sm text-white/80 hover:text-brand-gold uppercase tracking-wider font-sans"
+              className="block text-sm text-white/80 hover:text-brand-accent uppercase tracking-wider font-sans"
               onClick={() => setMenuOpen(false)}
             >
               Intention Salts

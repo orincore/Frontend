@@ -77,22 +77,22 @@ function HeroBanner() {
       <div className="container">
         <div className="relative flex flex-col md:flex-row items-center min-h-[420px] md:min-h-[520px] py-8 md:py-0">
           <div className="relative z-10 flex-1 max-w-lg md:pr-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-brand-purple leading-[1.1] whitespace-pre-line">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-brand-primary leading-[1.1] whitespace-pre-line">
               {slide.title}
             </h1>
-            <p className="mt-4 text-base md:text-lg text-brand-purple/60 font-sans max-w-sm">
+            <p className="mt-4 text-base md:text-lg text-brand-primary/70 font-sans max-w-sm">
               {slide.subtitle}
             </p>
             <div className="mt-6 flex items-center gap-4">
               <Link
                 href={slide.href}
-                className="inline-flex items-center gap-2 bg-brand-purple hover:bg-brand-dark text-white px-8 py-3.5 rounded-full text-sm font-sans font-medium tracking-wide transition-all duration-300 hover:shadow-xl hover:shadow-brand-purple/20"
+                className="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-secondary text-white px-8 py-3.5 rounded-full text-sm font-sans font-medium tracking-wide transition-all duration-300 hover:shadow-xl hover:shadow-brand-primary/30"
               >
                 {slide.cta} <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/"
-                className="text-sm font-sans text-brand-purple/60 hover:text-brand-purple underline underline-offset-4 transition-colors"
+                className="text-sm font-sans text-brand-secondary/70 hover:text-brand-secondary underline underline-offset-4 transition-colors"
               >
                 View All Products
               </Link>
@@ -105,8 +105,8 @@ function HeroBanner() {
                   onClick={() => setCurrentSlide(i)}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     i === currentSlide
-                      ? "w-8 bg-brand-purple"
-                      : "w-2 bg-brand-purple/20 hover:bg-brand-purple/40"
+                      ? "w-8 bg-brand-primary"
+                      : "w-2 bg-brand-primary/20 hover:bg-brand-primary/40"
                   }`}
                 />
               ))}
@@ -114,7 +114,7 @@ function HeroBanner() {
           </div>
 
           <div className="flex-1 relative mt-6 md:mt-0 w-full">
-            <div className="mx-auto w-full max-w-xl rounded-[32px] bg-white/60 p-3 md:p-5 shadow-2xl shadow-brand-purple/10">
+            <div className="mx-auto w-full max-w-xl rounded-[32px] bg-white/60 p-3 md:p-5 shadow-2xl shadow-brand-secondary/10">
               <div className="relative w-full aspect-[4/3] md:aspect-[3/2] rounded-[24px] overflow-hidden">
                 <Image
                   src={slide.image}
@@ -124,7 +124,7 @@ function HeroBanner() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-purple/25 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/25 to-transparent" />
               </div>
             </div>
           </div>
@@ -133,13 +133,13 @@ function HeroBanner() {
             onClick={() => setCurrentSlide((currentSlide - 1 + slides.length) % slides.length)}
             className="absolute left-0 top-1/2 -translate-y-1/2 z-20 h-10 w-10 rounded-full bg-white/80 hover:bg-white shadow-lg flex items-center justify-center transition-all hidden md:flex"
           >
-            <ChevronLeft className="h-5 w-5 text-brand-purple" />
+            <ChevronLeft className="h-5 w-5 text-brand-secondary" />
           </button>
           <button
             onClick={() => setCurrentSlide((currentSlide + 1) % slides.length)}
             className="absolute right-0 top-1/2 -translate-y-1/2 z-20 h-10 w-10 rounded-full bg-white/80 hover:bg-white shadow-lg flex items-center justify-center transition-all hidden md:flex"
           >
-            <ChevronRight className="h-5 w-5 text-brand-purple" />
+            <ChevronRight className="h-5 w-5 text-brand-secondary" />
           </button>
         </div>
       </div>
@@ -185,10 +185,10 @@ function CategoryGrid() {
     <section className="py-14 md:py-20">
       <div className="container">
         <div className="text-center mb-10">
-          <p className="text-xs font-sans uppercase tracking-[0.3em] text-brand-gold mb-3">
+          <p className="text-xs font-sans uppercase tracking-[0.3em] text-brand-support mb-3">
             Explore Our World
           </p>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-purple">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-primary">
             Shop by Category
           </h2>
         </div>
@@ -212,7 +212,7 @@ function CategoryGrid() {
                 <h3 className="text-white font-serif text-lg md:text-xl font-semibold drop-shadow-lg">
                   {cat.name}
                 </h3>
-                <span className="inline-flex items-center gap-1 text-white/80 text-xs font-sans mt-1 group-hover:text-brand-gold transition-colors">
+                <span className="inline-flex items-center gap-1 text-white/80 text-xs font-sans mt-1 group-hover:text-brand-support transition-colors">
                   Shop Now <ArrowRight className="h-3 w-3" />
                 </span>
               </div>
@@ -239,7 +239,7 @@ function BrandingSection() {
       </div>
 
       <div className="relative z-10 container text-center">
-        <p className="text-brand-gold/80 text-xs font-sans uppercase tracking-[0.4em] mb-6">
+        <p className="text-brand-support/80 text-xs font-sans uppercase tracking-[0.4em] mb-6">
           Rooted in Ancient Wisdom
         </p>
         <h2 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 leading-none">
@@ -255,17 +255,17 @@ function BrandingSection() {
 
         <div className="flex items-center justify-center gap-8 mt-10">
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-serif font-bold text-brand-gold">100%</div>
+            <div className="text-2xl md:text-3xl font-serif font-bold text-brand-support">100%</div>
             <div className="text-[11px] text-white/50 font-sans uppercase tracking-wider mt-1">Natural</div>
           </div>
           <div className="w-px h-10 bg-white/20" />
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-serif font-bold text-brand-gold">500+</div>
+            <div className="text-2xl md:text-3xl font-serif font-bold text-brand-support">500+</div>
             <div className="text-[11px] text-white/50 font-sans uppercase tracking-wider mt-1">Happy Souls</div>
           </div>
           <div className="w-px h-10 bg-white/20" />
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-serif font-bold text-brand-gold">50+</div>
+            <div className="text-2xl md:text-3xl font-serif font-bold text-brand-support">50+</div>
             <div className="text-[11px] text-white/50 font-sans uppercase tracking-wider mt-1">Products</div>
           </div>
         </div>
@@ -291,13 +291,13 @@ function ProductSection({
     <section className={`py-14 md:py-20 ${bgClass}`}>
       <div className="container">
         <div className="text-center mb-10">
-          <p className="text-xs font-sans uppercase tracking-[0.3em] text-brand-gold mb-3">
+          <p className="text-xs font-sans uppercase tracking-[0.3em] text-brand-support mb-3">
             Handcrafted Collection
           </p>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-purple mb-3">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-primary mb-3">
             {title}
           </h2>
-          <p className="text-sm text-brand-purple/50 font-sans max-w-lg mx-auto">
+          <p className="text-sm text-brand-primary/60 font-sans max-w-lg mx-auto">
             {subtitle}
           </p>
         </div>
@@ -311,7 +311,7 @@ function ProductSection({
         <div className="text-center mt-10">
           <Link
             href={href}
-            className="inline-flex items-center gap-2 border-2 border-brand-purple text-brand-purple hover:bg-brand-purple hover:text-white px-8 py-3 rounded-full text-sm font-sans font-medium tracking-wide transition-all duration-300"
+            className="inline-flex items-center gap-2 border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white px-8 py-3 rounded-full text-sm font-sans font-medium tracking-wide transition-all duration-300"
           >
             View All Products <ArrowRight className="h-4 w-4" />
           </Link>
@@ -338,7 +338,7 @@ function ProductGridCard({ product }: { product: Product }) {
 
         <button
           onClick={() => addItem(product)}
-          className="absolute bottom-3 right-3 h-10 w-10 rounded-full bg-white shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:bg-brand-purple hover:text-white"
+          className="absolute bottom-3 right-3 h-10 w-10 rounded-full bg-white shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:bg-brand-primary hover:text-white"
         >
           <Plus className="h-4 w-4" />
         </button>
@@ -368,12 +368,12 @@ function ProductGridCard({ product }: { product: Product }) {
         </h3>
 
         <div className="flex items-center justify-between mt-3">
-          <span className="text-base font-serif font-bold text-brand-purple">
+          <span className="text-base font-serif font-bold text-brand-primary">
             {formatPrice(product.price)}
           </span>
           <button
             onClick={() => addItem(product)}
-            className="flex items-center gap-1.5 text-[11px] font-sans font-medium text-brand-purple hover:text-white bg-brand-purple/5 hover:bg-brand-purple px-3 py-1.5 rounded-full transition-all duration-300"
+            className="flex items-center gap-1.5 text-[11px] font-sans font-medium text-brand-primary hover:text-white bg-brand-primary/5 hover:bg-brand-primary px-3 py-1.5 rounded-full transition-all duration-300"
           >
             <ShoppingBag className="h-3 w-3" /> Add
           </button>

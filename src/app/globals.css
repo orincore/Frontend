@@ -50,16 +50,16 @@
     font-family: 'Inter', sans-serif;
   }
   .text-gradient-gold {
-    background: linear-gradient(135deg, #C9A96E 0%, #E8D5A3 50%, #C9A96E 100%);
+    background: linear-gradient(135deg, #1E88E5 0%, #18A999 50%, #0F8A5F 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   .bg-gradient-purple {
-    background: linear-gradient(135deg, #2D1228 0%, #4A1942 40%, #6B2D5B 100%);
+    background: linear-gradient(135deg, #052A32 0%, #0B4F6C 40%, #0F8A5F 100%);
   }
   .bg-gradient-warm {
-    background: linear-gradient(180deg, #FAF7F2 0%, #F5F0E8 100%);
+    background: linear-gradient(180deg, #E6F4FF 0%, #F2FFF7 100%);
   }
   .shimmer {
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
