@@ -1,5 +1,4 @@
 import type { LandingPage } from "@/types";
-import TrainerIcon from "@/app/assets/icon.jpg";
 
 export const landingPages: LandingPage[] = [
   {
@@ -77,7 +76,7 @@ export const landingPages: LandingPage[] = [
         content: "With over 8 years of experience in aromatherapy and energy healing, Pratipal has helped thousands of people discover the true power of essential oils. Her approach combines ancient wisdom with modern science, ensuring every product is crafted with intention and backed by research.",
         visible: true,
         order: 5,
-        image: TrainerIcon,
+        image: "/assets/icon.jpg",
       },
       {
         id: "sec-eo-06",

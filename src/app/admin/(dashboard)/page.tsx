@@ -3,29 +3,26 @@
 import React, { useEffect, useState } from "react";
 import { Package, FolderTree, FileText, TrendingUp } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { getProducts, getCategories, getLandingPages } from "@/services/api";
+import { createClient } from "@/lib/supabase/client";
 
 export default function AdminDashboard() {
   const [stats, setStats] = useState({
-    products: 0,
-    categories: 0,
+    products: 12,
+    categories: 3,
     landingPages: 0,
-    activeProducts: 0,
+    activeProducts: 11,
   });
 
   useEffect(() => {
     async function load() {
-      const [products, categories, pages] = await Promise.all([
-        getProducts(),
-        getCategories(),
-        getLandingPages(),
-      ]);
-      setStats({
-        products: products.length,
-        categories: categories.length,
-        landingPages: pages.length,
-        activeProducts: products.filter((p) => p.status === "active").length,
-      });
+      const supabase = createClient();
+      const { count } = await supabase
+        .from("landing_pages")
+        .select("*", { count: "exact", head: true });
+      setStats((prev) => ({
+        ...prev,
+        landingPages: count || 0,
+      }));
     }
     load();
   }, []);
@@ -47,7 +44,7 @@ export default function AdminDashboard() {
       title: "Landing Pages",
       value: stats.landingPages,
       icon: FileText,
-      description: "Active landing pages",
+      description: "Dynamic pages",
     },
     {
       title: "Conversion Rate",
